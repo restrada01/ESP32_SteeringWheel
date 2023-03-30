@@ -103,16 +103,15 @@ function getReadings(){
     if (this.readyState == 4 && this.status == 200) {
       var myObj = JSON.parse(this.responseText);
       console.log(myObj);
-      var temp = myObj.temperature;
-      var hum = myObj.humidity;
-      gaugeTemp.value = temp;
-      gaugePot.value = hum;
+      var pot = myObj.potentiometer;
+      gaugePot.value = pot;
     }
   }; 
   xhr.open("GET", "/readings", true);
   xhr.send();
 }
 
+// listen for events and execute when pages are visited
 if (!!window.EventSource) {
   var source = new EventSource('/events');
   
@@ -130,11 +129,11 @@ if (!!window.EventSource) {
     console.log("message", e.data);
   }, false);
   
+  // whenever a new reading is requested, send value to potentiometer
   source.addEventListener('new_readings', function(e) {
     console.log("new_readings", e.data);
     var myObj = JSON.parse(e.data);
     console.log(myObj);
-    gaugeTemp.value = myObj.temperature;
-    gaugePot.value = myObj.humidity;
+    gaugePot.value = myObj.potentiometer;
   }, false);
 }
