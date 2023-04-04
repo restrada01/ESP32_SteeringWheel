@@ -1,10 +1,11 @@
 html {
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: Helvetica, sans-serif; 
     display: inline-block; 
     text-align: center;
+    background-color: black;
   }
   h1 {
-    font-size: 1.8rem; 
+    font-size: 2rem; 
     color: white;
   }
   p { 
@@ -12,13 +13,14 @@ html {
   }
   .topnav { 
     overflow: hidden; 
-    background-color: #0A1128;
+    background-color: #4F2683;
   }
   body {  
     margin: 0;
   }
   .content { 
     padding: 5%;
+    background-color: black;
   }
   .card-grid { 
     max-width: 1200px; 
@@ -27,12 +29,20 @@ html {
     grid-gap: 2rem; 
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+  .timer {
+    background-color: black;
+    height: 6rem;
+  }  
+  .timer-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ba78e6;
+  }
   .card { 
-    background-color: white; 
-    box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
+    background-color: black;
   }
   .card-title { 
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #034078
+    color: #ba78e6;
   }
