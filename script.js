@@ -51,17 +51,14 @@ var gaugeTemp = new LinearGauge({
   barWidth: 10,
 }).draw();
   
-// Create Humidity Gauge
+// Create Potentiometer Gauge
 var gaugePot = new RadialGauge({
   renderTo: 'potentiometer',
   width: 300,
   height: 300,
-  units: "Value",
+  units: "RPM",
   minValue: 0,
   maxValue: 100,
-  colorValueBoxRect: "#049faa",
-  colorValueBoxRectEnd: "#049faa",
-  colorValueBoxBackground: "#f1fbfc",
   valueInt: 2,
   majorTicks: [
       "0",
@@ -78,18 +75,18 @@ var gaugePot = new RadialGauge({
       {
           "from": 80,
           "to": 100,
-          "color": "#03C0C1"
+          "color": "#b091cf"
       }
   ],
-  colorPlate: "#fff",
+  colorPlate: "#050505",
   borderShadowWidth: 0,
   borders: false,
   needleType: "line",
-  colorNeedle: "#007F80",
-  colorNeedleEnd: "#007F80",
+  colorNeedle: "#ba78e6",
+  colorNeedleEnd: "#ba78e6",
   needleWidth: 2,
   needleCircleSize: 3,
-  colorNeedleCircleOuter: "#007F80",
+  colorNeedleCircleOuter: "#ba78e6",
   needleCircleOuter: true,
   needleCircleInner: false,
   animationDuration: 1500,
